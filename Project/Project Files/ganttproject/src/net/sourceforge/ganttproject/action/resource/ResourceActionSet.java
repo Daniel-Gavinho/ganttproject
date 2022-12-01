@@ -32,6 +32,8 @@ public class ResourceActionSet {
 
   private final ResourceDeleteAction myResourceDeleteAction;
 
+  private final  ResourceSeeAll myResourceSeeAll;
+
   private final ResourcePropertiesAction myResourcePropertiesAction;
 
   private final ResourceMoveUpAction myResourceMoveUpAction;
@@ -49,6 +51,7 @@ public class ResourceActionSet {
     HumanResourceManager manager = projectFrame.getHumanResourceManager();
     myResourceNewAction = new ResourceNewAction(manager, projectFrame.getRoleManager(), uiFacade);
     myResourceDeleteAction = new ResourceDeleteAction(manager, resourceContext, projectFrame, uiFacade);
+    myResourceSeeAll = new ResourceSeeAll(manager, projectFrame.getRoleManager(), uiFacade);
     myResourcePropertiesAction = new ResourcePropertiesAction(projectFrame, resourceContext, uiFacade);
     myResourceMoveUpAction = new ResourceMoveUpAction(table);
     myResourceMoveDownAction = new ResourceMoveDownAction(table);
@@ -60,8 +63,9 @@ public class ResourceActionSet {
     if (myActions == null) {
       myResourceNewAction.putValue(Action.SHORT_DESCRIPTION, null);
       myResourcePropertiesAction.putValue(Action.SHORT_DESCRIPTION, null);
+      myResourceSeeAll.putValue(Action.SHORT_DESCRIPTION, null);
       myResourceSendMailAction.putValue(Action.SHORT_DESCRIPTION, null);
-      myActions = new AbstractAction[] { myResourceNewAction, myResourcePropertiesAction };
+      myActions = new AbstractAction[] { myResourceNewAction,myResourceSeeAll, myResourcePropertiesAction };
     }
     return myActions;
   }
@@ -73,6 +77,8 @@ public class ResourceActionSet {
   public ResourceDeleteAction getResourceDeleteAction() {
     return myResourceDeleteAction;
   }
+
+  public ResourceSeeAll getMyResourceSeeAll() { return myResourceSeeAll; }
 
   public ResourcePropertiesAction getResourcePropertiesAction() {
     return myResourcePropertiesAction;

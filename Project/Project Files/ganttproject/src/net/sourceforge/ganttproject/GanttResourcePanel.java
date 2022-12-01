@@ -91,6 +91,7 @@ public class GanttResourcePanel extends TreeTableContainer<HumanResource, Resour
     }, new Action[]{resourceDeleteAction, assignmentDeleteAction});
     setArtefactActions(myResourceActionSet.getResourceNewAction(),
         myResourceActionSet.getResourcePropertiesAction(),
+            myResourceActionSet.getMyResourceSeeAll(),
         deleteAction);
     getTreeTable().setupActionMaps(myResourceActionSet.getResourceMoveUpAction(),
         myResourceActionSet.getResourceMoveDownAction(), null, null, deleteAction,

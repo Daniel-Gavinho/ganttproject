@@ -604,12 +604,13 @@ public class GanttProject extends GanttProjectBase implements ResourceView, Gant
       final GPAction taskNewAction = getTaskTree().getNewAction().asToolbarAction();
       final GPAction taskMultNewAction = getTaskTree().getNewMultAction().asToolbarAction();
       final GPAction resourceNewAction = getResourceTree().getNewAction().asToolbarAction();
+      final GPAction resourceSeeAllAction = getResourceTree().getNewAction().asToolbarAction();
       newAction = new ArtefactNewAction(new ActiveActionProvider() {
         @Override
         public AbstractAction getActiveAction() {
           return getTabs().getSelectedIndex() == UIFacade.GANTT_INDEX ? taskNewAction : resourceNewAction;
         }
-      }, new Action[]{taskNewAction,taskMultNewAction , resourceNewAction});
+      }, new Action[]{taskNewAction,taskMultNewAction ,resourceSeeAllAction, resourceNewAction});
       final TestGanttRolloverButton bNewTask = new TestGanttRolloverButton(taskNewAction);
       final TestGanttRolloverButton bMultNewTask = new TestGanttRolloverButton(taskMultNewAction);
       final TestGanttRolloverButton bnewResource = new TestGanttRolloverButton(resourceNewAction);
