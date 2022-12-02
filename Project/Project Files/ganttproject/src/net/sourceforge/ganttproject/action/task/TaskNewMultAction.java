@@ -24,13 +24,20 @@ import net.sourceforge.ganttproject.gui.UIFacade;
 import net.sourceforge.ganttproject.gui.UIUtil;
 import net.sourceforge.ganttproject.task.Task;
 import net.sourceforge.ganttproject.task.TaskManager;
+import net.sourceforge.ganttproject.gui.GanttMultTaskPropertiesBean;
+import net.sourceforge.ganttproject.language.GanttLanguage;
+import net.sourceforge.ganttproject.action.OkAction;
+import net.sourceforge.ganttproject.GanttTask;
 
 import java.awt.event.ActionEvent;
 import java.util.List;
+import java.util.Date;
+import java.util.Calendar;
 
 public class TaskNewMultAction extends GPAction {
   private final IGanttProject myProject;
   private final UIFacade myUiFacade;
+  private final Calendar myCalendar;
 
 
   public TaskNewMultAction(IGanttProject project, UIFacade uiFacade) {
@@ -41,6 +48,7 @@ public class TaskNewMultAction extends GPAction {
     super("task.newMult", size.asString());
     myProject = project;
     myUiFacade = uiFacade;
+    myCalendar = Calendar.getInstance();
   }
 
   @Override
@@ -48,25 +56,37 @@ public class TaskNewMultAction extends GPAction {
     return new TaskNewMultAction(myProject, myUiFacade, size);
   }
 
-  @Override
-  public void actionPerformed(ActionEvent e) {
-    if (calledFromAppleScreenMenu(e)) {
-      return;
-    }
-    myUiFacade.getUndoManager().undoableEdit(getLocalizedDescription(), new Runnable() {
+  public void show(final IGanttProject project, final UIFacade uiFacade) {
+    final GanttLanguage language = GanttLanguage.getInstance();
+    final GanttMultTaskPropertiesBean taskPropertiesBean = new GanttMultTaskPropertiesBean(myTasks, project, uiFacade);
+    final Action[] actions = new Action[] { new OkAction() {
       @Override
-      public void run() {
-        List<Task> selection = getUIFacade().getTaskSelectionManager().getSelectedTasks();
-        if (selection.size() > 1) {
-          return;
-        }
-
-        Task selectedTask = selection.isEmpty() ? null : selection.get(0);
-        Task newTask = getTaskManager().newTaskBuilder()
-            .withPrevSibling(selectedTask).withStartDate(getUIFacade().getGanttChart().getStartDate()).build();
-        myUiFacade.getTaskTree().startDefaultEditing(newTask);
+      public void actionPerformed(ActionEvent arg0) {
+        uiFacade.getUndoManager().undoableEdit(language.getText("properties.changed"), new Runnable() {
+          @Override
+          public void run(List<Task> selection) {
+            try {
+              project.getTaskManager().getAlgorithmCollection().getRecalculateTaskScheduleAlgorithm().run();
+            } catch (TaskDependencyException e) {
+              if (!GPLogger.log(e)) {
+                e.printStackTrace();
+              }
+            }
+            Date i = taskPropertiesBean.getStart().getTime();
+            myCalendar.setTime(i);
+            while(i.before(taskPropertiesBean.getEnd().getTime())){
+              Task selectedTask = selection.isEmpty() ? null : (GanttTask)selection.get(0);
+              Task newTask = getTaskManager().newTaskBuilder()
+                      .withPrevSibling(selectedTask).withStartDate(i).build();
+              myUiFacade.getTaskTree().startDefaultEditing(newTask);
+              myCalendar.add(Calendar.DATE, 1);
+              i = myCalendar.getTime();
+            }
+            uiFacade.refresh();
+          }
+        });
       }
-    });
+    }, CancelAction.EMPTY };
   }
 
   protected TaskManager getTaskManager() {

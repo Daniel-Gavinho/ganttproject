@@ -620,10 +620,12 @@ public class GanttProject extends GanttProjectBase implements ResourceView, Gant
           switch (getTabs().getSelectedIndex()) {
             case UIFacade.GANTT_INDEX:
               bNewTask.setVisible(true);
+              bMultNewTask.setVisible(true);
               bnewResource.setVisible(false);
               return;
             case UIFacade.RESOURCES_INDEX:
               bNewTask.setVisible(false);
+              bMultNewTask.setVisible(false);
               bnewResource.setVisible(true);
               return;
           }
