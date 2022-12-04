@@ -147,6 +147,14 @@ public class ToolbarBuilder {
       button.setAlignmentY(Component.CENTER_ALIGNMENT);
       button.setMargin(new Insets(0, 0, 0, 0));
     }
+    ButtonBuilder(TestGanttRolloverButton button, String img) {
+      myButton = Preconditions.checkNotNull(button);
+      button.setHorizontalTextPosition(SwingConstants.CENTER);
+      button.setVerticalTextPosition(SwingConstants.CENTER);
+      button.setTextHidden(true);
+      button.setAlignmentY(Component.CENTER_ALIGNMENT);
+      button.setMargin(new Insets(0, 0, 0, 0));
+    }
 
     public ButtonBuilder withAutoRepeat(int millis) {
       ActionUtil.setupAutoRepeat(myButton, millis);
@@ -168,6 +176,8 @@ public class ToolbarBuilder {
   public ToolbarBuilder addButton(Action action) {
     return addButton(new TestGanttRolloverButton(action));
   }
+
+  public ToolbarBuilder addButtonWithImg(TestGanttRolloverButton button){return new ButtonBuilder(button,"img").add();}
 
   public ButtonBuilder button(Action action) {
     return new ButtonBuilder(new TestGanttRolloverButton(action));
