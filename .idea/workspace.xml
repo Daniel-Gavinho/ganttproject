@@ -4,49 +4,299 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d437a5f3-b710-4734-8e7f-0c3abfa58e3d" name="Changes" comment="Remaining changes">
-      <change afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/workspace-id.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/workspace-id.txt.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject/src/net/sourceforge/ganttproject/gui/GanttMultTaskPropertiesBean.java" afterDir="false" />
+    <list default="true" id="d437a5f3-b710-4734-8e7f-0c3abfa58e3d" name="Changes" comment="-&gt;Created TaskNewMultAction, which allows for creation of several tasks at once (reocurring tasks).&#10;&#10;-&gt;Created GanttMultTaskPropertiesBean, which obtains &amp; processes the information from the dialog box for reocurring tasks.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/biz.ganttproject.core/build/libs/biz.ganttproject.core.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/biz.ganttproject.core/build/libs/biz.ganttproject.core.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/biz.ganttproject.impex.ical/build/libs/biz.ganttproject.impex.ical.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/biz.ganttproject.impex.ical/build/libs/biz.ganttproject.impex.ical.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/biz.ganttproject.impex.msproject2/build/libs/biz.ganttproject.impex.msproject2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/biz.ganttproject.impex.msproject2/build/libs/biz.ganttproject.impex.msproject2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/build/libs/...jar" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/build/libs/...jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/4.7/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/4.7/fileContent/annotation-processors.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/4.7/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/4.7/fileContent/fileContent.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/4.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/4.7/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/4.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/4.7/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/4.7/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/4.7/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/4.7/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/4.7/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/4.7/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/4.7/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/build/libs/ganttproject-2.8.10-r2367.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/build/libs/ganttproject-2.8.10-r2367.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/dist-bin/eclipsito.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/dist-bin/eclipsito.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/dist-bin/plugins-2.8.10/biz.ganttproject.core/biz.ganttproject.core.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/dist-bin/plugins-2.8.10/biz.ganttproject.core/biz.ganttproject.core.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/dist-bin/plugins-2.8.10/biz.ganttproject.impex.ical/biz.ganttproject.impex.ical.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/dist-bin/plugins-2.8.10/biz.ganttproject.impex.ical/biz.ganttproject.impex.ical.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/dist-bin/plugins-2.8.10/biz.ganttproject.impex.msproject2/biz.ganttproject.impex.msproject2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/dist-bin/plugins-2.8.10/biz.ganttproject.impex.msproject2/biz.ganttproject.impex.msproject2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/dist-bin/plugins-2.8.10/ganttproject/ganttproject.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/dist-bin/plugins-2.8.10/ganttproject/ganttproject.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/dist-bin/plugins-2.8.10/org.ganttproject.chart.pert/org.ganttproject.chart.pert.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/dist-bin/plugins-2.8.10/org.ganttproject.chart.pert/org.ganttproject.chart.pert.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/dist-bin/plugins-2.8.10/org.ganttproject.impex.htmlpdf/org.ganttproject.impex.htmlpdf.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-builder/dist-bin/plugins-2.8.10/org.ganttproject.impex.htmlpdf/org.ganttproject.impex.htmlpdf.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject-tester/build/libs/ganttproject-tester.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject-tester/build/libs/ganttproject-tester.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$15$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$15$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$15.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$Args.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$Args.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$ParserFactoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject$ParserFactoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject.class" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/GanttProject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/libs/ganttproject.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/libs/ganttproject.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/src/net/sourceforge/ganttproject/GanttProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject/src/net/sourceforge/ganttproject/GanttProject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/Mediator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/OSXAdapter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/OSXAdapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/PreferenceServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/ResourceTreeImageGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/ShowHideColumnsDialog$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/ShowHideColumnsDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/TaskModelModificationListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/TaskTreeImageGenerator$PaintState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/TaskTreeImageGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/TaskTreeImageGeneratorExt$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/TaskTreeImageGeneratorExt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/TreeTableCellEditorImpl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/TreeTableCellEditorImpl$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/TreeTableCellEditorImpl$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/TreeTableCellEditorImpl$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/TreeTableCellEditorImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/TreeUtil$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/TreeUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/GPColorChooser$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/GPColorChooser$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/GPColorChooser$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/GPColorChooser$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/GPColorChooser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/GPlainDocument.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/GTextField.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/GanttTaskPropertiesBean$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/GanttTaskPropertiesBean$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/GanttTaskPropertiesBean$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/GanttTaskPropertiesBean$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/GanttTaskPropertiesBean$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/GanttTaskPropertiesBean$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/GanttTaskPropertiesBean$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/GanttTaskPropertiesBean$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/GanttTaskPropertiesBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ListAndFieldsPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectMRUMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenDiagnosticImpl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenDiagnosticImpl$ShowDialogCallback.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenDiagnosticImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenDiagnosticUiFx$1$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenDiagnosticUiFx$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenDiagnosticUiFx$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenDiagnosticUiFx$2$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenDiagnosticUiFx$2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenDiagnosticUiFx$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenDiagnosticUiFx.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenDiagnosticUiSwing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenStrategy$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenStrategy$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenStrategy$ConvertMilestones.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenStrategy$Step1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenStrategy$Step1$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenStrategy$Step1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenStrategy$Step2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenStrategy$Step3$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenStrategy$Step3$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenStrategy$Step3$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenStrategy$Step3$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenStrategy$Step3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ProjectOpenStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/RecentColorsOption$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/RecentColorsOption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/ViewLogDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/BooleanOptionAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/CSVSettingsPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/CSVSettingsPanel$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/CSVSettingsPanel$ExportFieldsTableModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/CSVSettingsPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/ExportCsvOptionPageProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/GPOptionChoicePanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/GPOptionChoicePanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/GanttChartOptionPageProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/InterfaceOptionPageProvider$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/InterfaceOptionPageProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/OptionPageProviderPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/ProjectBasicOptionPageProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/ProjectRolesOptionPageProvider$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/ProjectRolesOptionPageProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/ProjectSettingsPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/ProjectSettingsPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/ResourceChartOptionPageProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/SettingsDialog2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/SpringUtilities$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/SpringUtilities.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/TopPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/model/CustomPropertyDefaultValueAdapter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/model/CustomPropertyDefaultValueAdapter$1BooleanDefaultValue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/model/CustomPropertyDefaultValueAdapter$1DateDefaultValue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/model/CustomPropertyDefaultValueAdapter$1DoubleDefaultValue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/model/CustomPropertyDefaultValueAdapter$1IntegerDefaultValue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/model/CustomPropertyDefaultValueAdapter$1TextDefaultValue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/options/model/CustomPropertyDefaultValueAdapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/projectwizard/NewProjectWizard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/projectwizard/NewProjectWizardWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/projectwizard/ProjectNamePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/projectwizard/RoleSetPage$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/projectwizard/RoleSetPage$RoleSetListModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/projectwizard/RoleSetPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/scrolling/ScrollingManagerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/tableView/ColumnManagerPanel$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/tableView/ColumnManagerPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/tableView/ColumnManagerPanel$1ShowHideSelectionAction$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/tableView/ColumnManagerPanel$1ShowHideSelectionAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/tableView/ColumnManagerPanel$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/tableView/ColumnManagerPanel$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/tableView/ColumnManagerPanel$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/tableView/ColumnManagerPanel$DefaultValueOption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/tableView/ColumnManagerPanel$IsVisibleOption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/tableView/ColumnManagerPanel$NameOption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/tableView/ColumnManagerPanel$PropertyClassOption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/tableView/ColumnManagerPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/CommonPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/CustomColumnsPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/CustomColumnsPanel$CustomColumnTableModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/CustomColumnsPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/DependencyTableModel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/DependencyTableModel$MyColumn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/DependencyTableModel$TaskComboItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/DependencyTableModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/InternalStateListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/ResourcesTableModel$Column.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/ResourcesTableModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/TaskAllocationsPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/TaskAllocationsPanel$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/TaskAllocationsPanel$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/TaskAllocationsPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/TaskDependenciesPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/TaskDependenciesPanel$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/TaskDependenciesPanel$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/TaskDependenciesPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/TaskScheduleDatesPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/TaskScheduleDatesPanel$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/TaskScheduleDatesPanel$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/TaskScheduleDatesPanel$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/TaskScheduleDatesPanel$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/TaskScheduleDatesPanel$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/TaskScheduleDatesPanel$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/gui/taskproperties/TaskScheduleDatesPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/importer/BufferProject$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/importer/BufferProject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/importer/FileChooserPage$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/importer/FileChooserPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/importer/ImportFileWizardImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/importer/ImporterChooserPage$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/importer/ImporterChooserPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/importer/ImporterFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/importer/ImporterFromGanttFile$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/importer/ImporterFromGanttFile$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/importer/ImporterFromGanttFile$TaskFieldImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/importer/ImporterFromGanttFile$VisibleFieldsImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/importer/ImporterFromGanttFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/importer/ImporterFromTxtFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/io/AssignmentSaver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/io/CalendarSaver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/io/GanttChartViewSaver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/io/GanttTXTOpen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/io/GanttXMLOpen$DefaultTagHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/io/GanttXMLOpen$TimelineTagHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/io/GanttXMLOpen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/io/GanttXMLSaver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/io/HistorySaver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/io/OptionSaver$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/io/OptionSaver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/io/ResourceSaver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/io/TaskSaver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/io/VacationSaver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/io/ViewSaver$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/io/ViewSaver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/io/XmlParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/language/ShortDateFormatOption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/parser/AllocationTagHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/parser/ColorValueParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/parser/CustomPropertiesTagHandler$CustomPropertiesStructure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/parser/CustomPropertiesTagHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/parser/DefaultWeekTagHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/parser/DependencyTagHandler$GanttDependStructure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/parser/DependencyTagHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/parser/OptionTagHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/parser/PreviousStateTasksTagHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/parser/ResourceTagHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/parser/RoleTagHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/parser/TaskDisplayColumnsTagHandler$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/parser/TaskDisplayColumnsTagHandler$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/parser/TaskDisplayColumnsTagHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/parser/TaskPropertiesTagHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/parser/TaskTagHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/parser/VacationTagHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/parser/ViewTagHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/plugins/PluginManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/GanttPrintable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$10$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$11$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$12$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$5$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$6$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$7$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$8$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$PagePreview.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$PreviewContainer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview$StatusBar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/print/PrintPreview.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/resource/OverwritingMerger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/roles/RoleImpl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/roles/RoleImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/roles/RoleManagerImpl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/roles/RoleManagerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/roles/RolePersistentID.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/roles/RoleSetImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/search/ResourceSearchService$MySearchResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/search/ResourceSearchService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/search/SearchServiceBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/search/TaskSearchService$MySearchResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/search/TaskSearchService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/shape/JPaintCombo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/shape/PaintCellRenderer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/BlankLineNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/CustomColumEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/CustomColumsListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/TaskActivitiesAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/TaskActivityImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/TaskNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/TaskProperties$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/TaskProperties$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/TaskProperties$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/TaskProperties$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/TaskProperties$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/TaskProperties$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/TaskProperties.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/algorithm/CostAlgorithmImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/algorithm/CriticalPathAlgorithmImpl$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/algorithm/CriticalPathAlgorithmImpl$Processor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/algorithm/CriticalPathAlgorithmImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/algorithm/FindPossibleDependeesAlgorithmImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/algorithm/ProjectBoundsAlgorithm$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/algorithm/ProjectBoundsAlgorithm$Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/algorithm/ProjectBoundsAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/algorithm/SortTasksAlgorithm$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/algorithm/SortTasksAlgorithm$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/algorithm/SortTasksAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/dependency/LoopDetector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/dependency/RangeSearchFromKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/dependency/RangeSearchToKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/dependency/TaskDependencySliceAsDependant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/dependency/TaskDependencySliceAsDependee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/dependency/TaskDependencySliceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/dependency/constraint/ConstraintImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/dependency/constraint/DependencyActivityBindingImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/dependency/constraint/FinishFinishConstraintImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/dependency/constraint/FinishStartConstraintImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/dependency/constraint/StartFinishConstraintImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/dependency/constraint/StartStartConstraintImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/task/event/TaskListenerAdapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/undo/UndoManagerImpl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/undo/UndoManagerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/undo/UndoableEditImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/util/BrowserControl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/util/BrowserControl$Platforms.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/util/BrowserControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/util/ColorConvertion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/util/DateUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/util/FileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/util/MathUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/util/MouseUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/util/PropertiesUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/util/StringUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/wizard/AbstractFileChooserPage$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/wizard/AbstractFileChooserPage$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/wizard/AbstractFileChooserPage$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/wizard/AbstractFileChooserPage$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/wizard/AbstractFileChooserPage$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/wizard/AbstractFileChooserPage$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/wizard/AbstractFileChooserPage$UrlFetcher$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/wizard/AbstractFileChooserPage$UrlFetcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/net/sourceforge/ganttproject/wizard/AbstractFileChooserPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/build/classes/java/main/org/ganttproject/WebStartIDClass.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/src/net/sourceforge/ganttproject/action/task/TaskNewMultAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject/src/net/sourceforge/ganttproject/action/task/TaskNewMultAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/org.ganttproject.chart.pert/build/libs/org.ganttproject.chart.pert.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/org.ganttproject.chart.pert/build/libs/org.ganttproject.chart.pert.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Project Files/org.ganttproject.impex.htmlpdf/build/libs/org.ganttproject.impex.htmlpdf.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/org.ganttproject.impex.htmlpdf/build/libs/org.ganttproject.impex.htmlpdf.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Project Files/ganttproject/src/net/sourceforge/ganttproject/gui/GanttMultTaskPropertiesBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Project Files/ganttproject/src/net/sourceforge/ganttproject/gui/GanttMultTaskPropertiesBean.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +403,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669755496594</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="-&gt; Created GanttM">
+      <created>1670021673589</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670021673590</updated>
+    </task>
+    <task id="LOCAL-00007" summary="-&gt;Created TaskNewMultAction, which allows for creation of several tasks at once (reocurring tasks).&#10;&#10;-&gt;Created GanttMultTaskPropertiesBean, which obtains &amp; processes the information from the dialog box for reocurring tasks.">
+      <created>1670021870148</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670021870148</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,6 +438,8 @@
     <MESSAGE value="Project Folder" />
     <MESSAGE value="Unversioned Files" />
     <MESSAGE value="Remaining files that aren't bugged" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remaining files that aren't bugged" />
+    <MESSAGE value="Remaining changes" />
+    <MESSAGE value="-&gt;Created TaskNewMultAction, which allows for creation of several tasks at once (reocurring tasks).&#10;&#10;-&gt;Created GanttMultTaskPropertiesBean, which obtains &amp; processes the information from the dialog box for reocurring tasks." />
+    <option name="LAST_COMMIT_MESSAGE" value="-&gt;Created TaskNewMultAction, which allows for creation of several tasks at once (reocurring tasks).&#10;&#10;-&gt;Created GanttMultTaskPropertiesBean, which obtains &amp; processes the information from the dialog box for reocurring tasks." />
   </component>
 </project>

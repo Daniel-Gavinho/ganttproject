@@ -27,12 +27,17 @@ import net.sourceforge.ganttproject.task.TaskManager;
 import net.sourceforge.ganttproject.gui.GanttMultTaskPropertiesBean;
 import net.sourceforge.ganttproject.language.GanttLanguage;
 import net.sourceforge.ganttproject.action.OkAction;
+import net.sourceforge.ganttproject.action.CancelAction;
+import net.sourceforge.ganttproject.GPLogger;
+import net.sourceforge.ganttproject.task.dependency.TaskDependencyException;
+
 import net.sourceforge.ganttproject.GanttTask;
 
 import java.awt.event.ActionEvent;
 import java.util.List;
 import java.util.Date;
 import java.util.Calendar;
+import javax.swing.Action;
 
 public class TaskNewMultAction extends GPAction {
   private final IGanttProject myProject;
@@ -56,15 +61,20 @@ public class TaskNewMultAction extends GPAction {
     return new TaskNewMultAction(myProject, myUiFacade, size);
   }
 
+  @Override
+  public void actionPerformed(ActionEvent arg){
+    show(myProject, myUiFacade);
+  }
+
   public void show(final IGanttProject project, final UIFacade uiFacade) {
+    List<Task> selection = uiFacade.getTaskSelectionManager().getSelectedTasks();
+    final GanttTask[] tasks = new GanttTask[] { (GanttTask) selection.get(0) };
     final GanttLanguage language = GanttLanguage.getInstance();
-    final GanttMultTaskPropertiesBean taskPropertiesBean = new GanttMultTaskPropertiesBean(myTasks, project, uiFacade);
+    final GanttMultTaskPropertiesBean taskPropertiesBean = new GanttMultTaskPropertiesBean(tasks, project, uiFacade);
     final Action[] actions = new Action[] { new OkAction() {
-      @Override
       public void actionPerformed(ActionEvent arg0) {
         uiFacade.getUndoManager().undoableEdit(language.getText("properties.changed"), new Runnable() {
-          @Override
-          public void run(List<Task> selection) {
+          public void run() {
             try {
               project.getTaskManager().getAlgorithmCollection().getRecalculateTaskScheduleAlgorithm().run();
             } catch (TaskDependencyException e) {
@@ -72,6 +82,7 @@ public class TaskNewMultAction extends GPAction {
                 e.printStackTrace();
               }
             }
+            List<Task> selection = myUiFacade.getTaskSelectionManager().getSelectedTasks();
             Date i = taskPropertiesBean.getStart().getTime();
             myCalendar.setTime(i);
             while(i.before(taskPropertiesBean.getEnd().getTime())){

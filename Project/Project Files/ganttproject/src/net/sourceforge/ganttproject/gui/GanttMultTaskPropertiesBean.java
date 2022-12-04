@@ -204,7 +204,7 @@ public class GanttMultTaskPropertiesBean extends JPanel {
 
     addEmptyRow(propertiesPanel);
 
-    OptionsPageBuilder builder = new OptionsPageBuilder(GanttTaskPropertiesBean.this, OptionsPageBuilder.TWO_COLUMN_LAYOUT);
+    OptionsPageBuilder builder = new OptionsPageBuilder(GanttMultTaskPropertiesBean.this, OptionsPageBuilder.TWO_COLUMN_LAYOUT);
     builder.setUiFacade(myUIfacade);
     JPanel colorBox = new JPanel(new BorderLayout(5, 0));
     colorBox.add(builder.createColorComponent(myTaskColorOption).getJComponent(), BorderLayout.WEST);
@@ -264,9 +264,25 @@ public class GanttMultTaskPropertiesBean extends JPanel {
     propertiesPanel.add(valueBox);
   }
 
+  /** Construct the notes panel */
+  private void constructNotesPanel() {
+    secondRowPanelNotes = new JPanel(new BorderLayout());
+    UIUtil.createTitle(secondRowPanelNotes, language.getText("notesTask"));
+
+    noteAreaNotes = new JTextArea(8, 40);
+    noteAreaNotes.setLineWrap(true);
+    noteAreaNotes.setWrapStyleWord(true);
+    noteAreaNotes.setBackground(new Color(1.0f, 1.0f, 1.0f));
+
+    scrollPaneNotes = new JScrollPane(noteAreaNotes);
+    secondRowPanelNotes.add(scrollPaneNotes, BorderLayout.CENTER);
+    notesPanel = secondRowPanelNotes;
+  }
+
   /** Initialize the widgets */
   private void init() {
 
+    constructNotesPanel();
     tabbedPane = new JTabbedPane() {
       @Override
       public void addTab(String title, Icon icon, Component component) {
@@ -440,6 +456,21 @@ public class GanttMultTaskPropertiesBean extends JPanel {
       }
     }
     return false;
+  }
+
+  private void storeOriginalValues(GanttTask task) {
+    originalName = task.getName();
+    originalWebLink = task.getWebLink();
+    originalIsMilestone = task.isLegacyMilestone();
+    originalStartDate = task.getStart();
+    originalEndDate = task.getEnd();
+    originalNotes = task.getNotes();
+    originalCompletionPercentage = task.getCompletionPercentage();
+    originalPriority = task.getPriority();
+    originalShape = task.getShape();
+    originalEarliestBeginDate = task.getThird();
+    originalEarliestBeginEnabled = task.getThirdDateConstraint();
+    originalIsProjectTask = task.isProjectTask();
   }
 
 }
